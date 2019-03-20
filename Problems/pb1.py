@@ -1,4 +1,7 @@
 class Pb1:
+    def __str__(self):
+        return "Problem 1 : Multiples of 3 and 5"
+
     def get_multiples_sum(self, multiples_list, ceiling):
         multiples_sum = 0
         nb_multiples = len(multiples_list)
@@ -13,7 +16,3 @@ class Pb1:
                     multiple_index += 1
 
         return multiples_sum
-
-if __name__ == '__main__':
-    pb1 = Pb1()
-    print(pb1.get_multiples_sum([3, 5], 1000))
