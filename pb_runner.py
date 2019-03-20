@@ -1,5 +1,5 @@
 import time
-from Problems.pb1 import Pb1
+from problems.pb1 import Pb1
 
 
 class PbRunner:
