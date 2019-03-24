@@ -2,6 +2,7 @@ import time
 from problems.pb1 import Pb1
 from problems.pb10 import Pb10
 from problems.pb11 import Pb11
+from problems.pb12 import Pb12
 from problems.pb2 import Pb2
 from problems.pb3 import Pb3
 from problems.pb4 import Pb4
@@ -14,7 +15,7 @@ from problems.pb9 import Pb9
 
 class PbRunner:
     def run(self):
-        pb, answer = self.run_problem(11)
+        pb, answer = self.run_problem(12)
         if pb != None:
             print(pb)
             print("Answer:", answer)
@@ -57,6 +58,9 @@ class PbRunner:
         elif pb_number == 11:
             pb = Pb11()
             answer = pb.greatest_product(4)
+        elif pb_number == 12:
+            pb = Pb12()
+            answer = pb.first_triangle_number_with_n_divisors(500)
         return pb, answer
 
 

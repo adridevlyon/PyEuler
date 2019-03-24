@@ -1,3 +1,6 @@
+from functools import reduce
+
+
 class PrimeHelper:
 
     def all_primes_below(self, max_value):
@@ -81,3 +84,6 @@ class PrimeHelper:
             # as intended
             raise ValueError("next_factor cannot be greater than input_number, "
                              "the method may have been called with wrong arguments")
+
+    def number_divisors(self, factors):
+        return reduce(lambda x, y : x * y, [f + 1 for f in factors])
