@@ -1,10 +1,11 @@
 import time
 from problems.pb1 import Pb1
+from problems.pb2 import Pb2
 
 
 class PbRunner:
     def run(self):
-        pb, answer = self.run_problem(1)
+        pb, answer = self.run_problem(2)
         if pb != None:
             print(pb)
             print("Answer:", answer)
@@ -17,6 +18,9 @@ class PbRunner:
         if pb_number == 1:
             pb = Pb1()
             answer = pb.get_multiples_sum([3, 5], 1000)
+        elif pb_number == 2:
+            pb = Pb2()
+            answer = pb.get_sum_of_even_terms_less_than(4000000)
         return pb, answer
 
 
