@@ -7,11 +7,12 @@ from problems.pb5 import Pb5
 from problems.pb6 import Pb6
 from problems.pb7 import Pb7
 from problems.pb8 import Pb8
+from problems.pb9 import Pb9
 
 
 class PbRunner:
     def run(self):
-        pb, answer = self.run_problem(8)
+        pb, answer = self.run_problem(9)
         if pb != None:
             print(pb)
             print("Answer:", answer)
@@ -45,6 +46,9 @@ class PbRunner:
         elif pb_number == 8:
             pb = Pb8()
             answer = pb.greatest_product(13)
+        elif pb_number == 9:
+            pb = Pb9()
+            answer = pb.product_of_pythagorean_triplet(1000)
         return pb, answer
 
 
