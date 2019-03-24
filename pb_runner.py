@@ -5,11 +5,12 @@ from problems.pb3 import Pb3
 from problems.pb4 import Pb4
 from problems.pb5 import Pb5
 from problems.pb6 import Pb6
+from problems.pb7 import Pb7
 
 
 class PbRunner:
     def run(self):
-        pb, answer = self.run_problem(6)
+        pb, answer = self.run_problem(7)
         if pb != None:
             print(pb)
             print("Answer:", answer)
@@ -37,6 +38,9 @@ class PbRunner:
         elif pb_number == 6:
             pb = Pb6()
             answer = pb.difference_squares_and_sum(100)
+        elif pb_number == 7:
+            pb = Pb7()
+            answer = pb.n_th_prime(10001)
         return pb, answer
 
 
