@@ -2,11 +2,12 @@ import time
 from problems.pb1 import Pb1
 from problems.pb2 import Pb2
 from problems.pb3 import Pb3
+from problems.pb4 import Pb4
 
 
 class PbRunner:
     def run(self):
-        pb, answer = self.run_problem(3)
+        pb, answer = self.run_problem(4)
         if pb != None:
             print(pb)
             print("Answer:", answer)
@@ -25,6 +26,9 @@ class PbRunner:
         elif pb_number == 3:
             pb = Pb3()
             answer = pb.largest_prime_factor(600851475143)
+        elif pb_number == 4:
+            pb = Pb4()
+            answer = pb.largest_palindrom_with_factors_at_most(999)
         return pb, answer
 
 
@@ -32,8 +36,8 @@ if __name__ == '__main__':
     runner = PbRunner()
 
     print()
-    start_time = time.process_time_ns()
+    start_time = time.process_time()
     runner.run()
-    end_time = time.process_time_ns()
-    print("Execution duration: %g ms" % ((end_time - start_time)/1000))
+    end_time = time.process_time()
+    print("Execution duration: %g ms" % ((end_time - start_time) * 1000))
 
