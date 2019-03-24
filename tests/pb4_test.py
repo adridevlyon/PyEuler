@@ -7,6 +7,5 @@ class Pb4Test(unittest.TestCase):
         pb = Pb4()
         self.assertEqual(9009, pb.largest_palindrom_with_factors_at_most(99))
 
-
-if __name__ == '__main__':
-    unittest.main()
+    def run_all(self):
+        unittest.main()

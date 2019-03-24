@@ -7,6 +7,5 @@ class Pb3Test(unittest.TestCase):
         pb = Pb3()
         self.assertEqual(29, pb.largest_prime_factor(13195))
 
-
-if __name__ == '__main__':
-    unittest.main()
+    def run_all(self):
+        unittest.main()

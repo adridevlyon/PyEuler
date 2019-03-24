@@ -7,6 +7,5 @@ class Pb2Test(unittest.TestCase):
         pb = Pb2()
         self.assertEqual(44, pb.get_sum_of_even_terms_less_than(90))
 
-
-if __name__ == '__main__':
-    unittest.main()
+    def run_all(self):
+        unittest.main()

@@ -7,6 +7,5 @@ class Pb5Test(unittest.TestCase):
         pb = Pb5()
         self.assertEqual(2520, pb.smallest_common_multiple_for_all_numbers_below(10))
 
-
-if __name__ == '__main__':
-    unittest.main()
+    def run_all(self):
+        unittest.main()

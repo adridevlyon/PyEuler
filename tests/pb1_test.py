@@ -7,6 +7,5 @@ class Pb1Test(unittest.TestCase):
         pb = Pb1()
         self.assertEqual(23, pb.get_multiples_sum([3, 5], 10))
 
-
-if __name__ == '__main__':
-    unittest.main()
+    def run_all(self):
+        unittest.main()
