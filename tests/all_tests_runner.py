@@ -7,6 +7,7 @@ from tests.pb6_test import Pb6Test
 from tests.pb7_test import Pb7Test
 from tests.pb8_test import Pb8Test
 from tests.pb9_test import Pb9Test
+from tests.pb10_test import Pb10Test
 
 if __name__ == '__main__':
     Pb1Test().run_all()
@@ -18,3 +19,4 @@ if __name__ == '__main__':
     Pb7Test().run_all()
     Pb8Test().run_all()
     Pb9Test().run_all()
+    Pb10Test().run_all()

@@ -1,5 +1,6 @@
 import time
 from problems.pb1 import Pb1
+from problems.pb10 import Pb10
 from problems.pb2 import Pb2
 from problems.pb3 import Pb3
 from problems.pb4 import Pb4
@@ -12,7 +13,7 @@ from problems.pb9 import Pb9
 
 class PbRunner:
     def run(self):
-        pb, answer = self.run_problem(9)
+        pb, answer = self.run_problem(10)
         if pb != None:
             print(pb)
             print("Answer:", answer)
@@ -49,6 +50,9 @@ class PbRunner:
         elif pb_number == 9:
             pb = Pb9()
             answer = pb.product_of_pythagorean_triplet(1000)
+        elif pb_number == 10:
+            pb = Pb10()
+            answer = pb.sum_of_primes_below(2000000)
         return pb, answer
 
 

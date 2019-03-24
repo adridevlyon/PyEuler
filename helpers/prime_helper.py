@@ -1,5 +1,27 @@
 class PrimeHelper:
 
+    def all_primes_below(self, max_value):
+        eratosthenes_sieve_odds = [True] * (int((max_value - 1) / 2))
+        for ind, prime_candidate in enumerate(eratosthenes_sieve_odds):
+            if prime_candidate:
+                prime_value = 2 * ind + 3
+                next_multiple = prime_value * prime_value
+                while next_multiple <= max_value:
+                    eratosthenes_sieve_odds[int((next_multiple - 3) / 2)] = False
+                    next_multiple += 2 * prime_value
+
+        return [2] + [2 * ind + 3 for ind, x in enumerate(eratosthenes_sieve_odds) if x]
+
+    '''
+    Here we don't care to check if the factor is a prime number.
+    The reason is simple : it is intended to be called a certain way.
+    The constraint is to ensure that the least factor of input_number is least_factor_possible
+    How did I choose to do that : 
+    * start with least_factor_possible = 2
+    * when found factor f divides input_number, recursive call with input_number/f
+    With that, found factor can't be composite because its prime factors have been already added to the factors
+    and "removed" from input_number by the previous calls
+    '''
     def factors(self, input_number, factors, least_factor_possible):
         next_factor = least_factor_possible
         is_divisible = input_number % next_factor == 0
