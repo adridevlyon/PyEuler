@@ -3,11 +3,12 @@ from problems.pb1 import Pb1
 from problems.pb2 import Pb2
 from problems.pb3 import Pb3
 from problems.pb4 import Pb4
+from problems.pb5 import Pb5
 
 
 class PbRunner:
     def run(self):
-        pb, answer = self.run_problem(4)
+        pb, answer = self.run_problem(5)
         if pb != None:
             print(pb)
             print("Answer:", answer)
@@ -29,6 +30,9 @@ class PbRunner:
         elif pb_number == 4:
             pb = Pb4()
             answer = pb.largest_palindrom_with_factors_at_most(999)
+        elif pb_number == 5:
+            pb = Pb5()
+            answer = pb.smallest_common_multiple_for_all_numbers_below(20)
         return pb, answer
 
 
