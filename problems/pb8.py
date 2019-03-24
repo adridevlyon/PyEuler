@@ -3,7 +3,7 @@ from functools import reduce
 
 class Pb8:
     def __str__(self):
-        return "Problem 7 : nth prime"
+        return "Problem 8 : Largest product in a series"
 
     def greatest_product(self, number_digits):
         large_number = [
