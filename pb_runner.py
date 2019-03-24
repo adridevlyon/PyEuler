@@ -4,11 +4,12 @@ from problems.pb2 import Pb2
 from problems.pb3 import Pb3
 from problems.pb4 import Pb4
 from problems.pb5 import Pb5
+from problems.pb6 import Pb6
 
 
 class PbRunner:
     def run(self):
-        pb, answer = self.run_problem(5)
+        pb, answer = self.run_problem(6)
         if pb != None:
             print(pb)
             print("Answer:", answer)
@@ -33,6 +34,9 @@ class PbRunner:
         elif pb_number == 5:
             pb = Pb5()
             answer = pb.smallest_common_multiple_for_all_numbers_below(20)
+        elif pb_number == 6:
+            pb = Pb6()
+            answer = pb.difference_squares_and_sum(100)
         return pb, answer
 
 
