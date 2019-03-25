@@ -4,6 +4,7 @@ from problems.pb10 import Pb10
 from problems.pb11 import Pb11
 from problems.pb12 import Pb12
 from problems.pb13 import Pb13
+from problems.pb14 import Pb14
 from problems.pb2 import Pb2
 from problems.pb3 import Pb3
 from problems.pb4 import Pb4
@@ -16,7 +17,7 @@ from problems.pb9 import Pb9
 
 class PbRunner:
     def run(self):
-        pb, answer = self.run_problem(13)
+        pb, answer = self.run_problem(14)
         if pb != None:
             print(pb)
             print("Answer:", answer)
@@ -65,6 +66,9 @@ class PbRunner:
         elif pb_number == 13:
             pb = Pb13()
             answer = pb.compute_10_first_digits()
+        elif pb_number == 14:
+            pb = Pb14()
+            answer = pb.longest_collatz_sequence(1000000)
         return pb, answer
 
 

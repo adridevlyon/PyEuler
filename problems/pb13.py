@@ -1,5 +1,4 @@
 from helpers.number_helper import NumberHelper
-from helpers.prime_helper import PrimeHelper
 
 
 class Pb13:
