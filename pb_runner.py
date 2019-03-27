@@ -5,6 +5,7 @@ from problems.pb11 import Pb11
 from problems.pb12 import Pb12
 from problems.pb13 import Pb13
 from problems.pb14 import Pb14
+from problems.pb15 import Pb15
 from problems.pb2 import Pb2
 from problems.pb3 import Pb3
 from problems.pb4 import Pb4
@@ -17,7 +18,7 @@ from problems.pb9 import Pb9
 
 class PbRunner:
     def run(self):
-        pb, answer = self.run_problem(14)
+        pb, answer = self.run_problem(15)
         if pb != None:
             print(pb)
             print("Answer:", answer)
@@ -69,6 +70,9 @@ class PbRunner:
         elif pb_number == 14:
             pb = Pb14()
             answer = pb.longest_collatz_sequence(1000000)
+        elif pb_number == 15:
+            pb = Pb15()
+            answer = pb.count_paths_in_grid(20)
         return pb, answer
 
 
